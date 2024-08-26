@@ -42,23 +42,44 @@
 //     belt: 'orange',
 //     age : 21,
 // }
-var character;
-var age;
-var isLoggedIn;
-age = 1;
-isLoggedIn = true;
-character = 'frost';
-var frostx;
-// frostx.push('shaun');
+// let character: string;
+// let age: number;
+// let isLoggedIn: boolean;
+// age = 1;
+// isLoggedIn = true;
+// character = 'frost';
+// let frostx: string[];
+// // frostx.push('shaun');
+// let mixed: (string|number|boolean)[] = [];
+// mixed.push('hellp');
+// mixed.push(2);
+// mixed.push(false);
+// console.group(mixed)
+// let uid: string|number;
+// uid = '123';
+// uid = 123;
+// let frostone: object;
+// frostone = { name: 'yoshi', age: 30};
+// let frosttwo: {
+//     name: string,
+//     age: number,
+//     beltColor: string,
+// };
+// frosttwo = { name: 'mario', age: 20, beltColor: 'black'}
+var age = 25;
+age = true;
+console.log(age);
+age = 'hello';
+console.log(age);
+age = { name: 'luigi' };
+console.log(age);
 var mixed = [];
-mixed.push('hellp');
-mixed.push(2);
+mixed.push(5);
+mixed.push('mario');
 mixed.push(false);
-console.group(mixed);
-var uid;
-uid = '123';
-uid = 123;
-var frostone;
-frostone = { name: 'yoshi', age: 30 };
-var frosttwo;
-frosttwo = { name: 'mario', age: 20, beltColor: 'black' };
+console.log(mixed);
+var ninja;
+ninja = { name: 'yoshi', age: 25 };
+console.log(ninja);
+ninja = { name: 25, age: 'yoshi' };
+console.log(ninja);

@@ -63,39 +63,61 @@
 //     age : 21,
 // }
 
-let character: string;
-let age: number;
-let isLoggedIn: boolean;
+// let character: string;
+// let age: number;
+// let isLoggedIn: boolean;
 
-age = 1;
+// age = 1;
 
-isLoggedIn = true;
+// isLoggedIn = true;
 
-character = 'frost';
+// character = 'frost';
 
 
-let frostx: string[];
+// let frostx: string[];
 
-// frostx.push('shaun');
+// // frostx.push('shaun');
 
-let mixed: (string|number|boolean)[] = [];
-mixed.push('hellp');
-mixed.push(2);
+// let mixed: (string|number|boolean)[] = [];
+// mixed.push('hellp');
+// mixed.push(2);
+// mixed.push(false);
+// console.group(mixed)
+
+// let uid: string|number;
+// uid = '123';
+// uid = 123;
+
+
+// let frostone: object;
+// frostone = { name: 'yoshi', age: 30};
+
+// let frosttwo: {
+//     name: string,
+//     age: number,
+//     beltColor: string,
+// };
+
+// frosttwo = { name: 'mario', age: 20, beltColor: 'black'}
+
+let age: any = 25;
+age = true;
+console.log(age)
+age= 'hello'
+console.log(age)
+age = { name: 'luigi'}
+console.log(age)
+
+let mixed: any[] = [];
+
+mixed.push(5);
+mixed.push('mario');
 mixed.push(false);
-console.group(mixed)
+console.log(mixed);
 
-let uid: string|number;
-uid = '123';
-uid = 123;
+let ninja: { name: any, age: any};
 
-
-let frostone: object;
-frostone = { name: 'yoshi', age: 30};
-
-let frosttwo: {
-    name: string,
-    age: number,
-    beltColor: string,
-};
-
-frosttwo = { name: 'mario', age: 20, beltColor: 'black'}
+ninja = {name: 'yoshi', age: 25};
+console.log(ninja);
+ninja = {name: 25, age: 'yoshi'};
+console.log(ninja);
