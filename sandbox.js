@@ -18,27 +18,47 @@
 //     return diameter * Math.PI
 // }
 // console.log(circ(7.5));
-var names = ['luigi', 'mario', 'yoshi'];
-names.push('toad');
-// names.push();
-// names[0] = 3;
-var numbers = [10, 20, 30, 40];
-numbers.push(25);
-var mixed = ['ken', 4, 'chun-li', 8, 9];
-mixed.push('ruy');
-mixed.push(10);
-mixed[0] = 3;
-var ninja = {
-    name: 'mario',
-    belt: 'black',
-    age: 30,
-};
-ninja.age = 40;
-ninja.name = 'ryu';
-// ninja.age = 21
-// ninja.skills = ['fighting', 'sneaking']
-ninja = {
-    name: 'yoshi',
-    belt: 'orange',
-    age: 21,
-};
+// let names = ['luigi', 'mario', 'yoshi'];
+// names.push('toad');
+// // names.push();
+// // names[0] = 3;
+// let numbers = [10, 20, 30, 40];
+// numbers.push(25);
+// let mixed = ['ken', 4, 'chun-li', 8, 9];
+// mixed.push('ruy');
+// mixed.push(10);
+// mixed[0] = 3;
+// let ninja = {
+//     name: 'mario',
+//     belt: 'black',
+//     age : 30,
+// };
+// ninja.age = 40;
+// ninja.name = 'ryu'
+// // ninja.age = 21
+// // ninja.skills = ['fighting', 'sneaking']
+// ninja = {
+//     name: 'yoshi',
+//     belt: 'orange',
+//     age : 21,
+// }
+var character;
+var age;
+var isLoggedIn;
+age = 1;
+isLoggedIn = true;
+character = 'frost';
+var frostx;
+// frostx.push('shaun');
+var mixed = [];
+mixed.push('hellp');
+mixed.push(2);
+mixed.push(false);
+console.group(mixed);
+var uid;
+uid = '123';
+uid = 123;
+var frostone;
+frostone = { name: 'yoshi', age: 30 };
+var frosttwo;
+frosttwo = { name: 'mario', age: 20, beltColor: 'black' };
