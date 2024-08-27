@@ -6,15 +6,15 @@
 
 //classes
 class Invoice{
-    client: string;
-    details: string;
-    amount: number;
+    // readonly client: string;
+    // private details: string;
+    // public amount: number;
 
-    constructor(c: string, d:string, a: number){
-        this.client = c,
-        this.details = d,
-        this.amount = a;
-    }
+    constructor(
+        readonly client : string,
+        private details: string,
+        public amount: number,
+    ){}
 
     format() {
         return `${this.client} owes RP${this.amount} for ${this.details}`;
@@ -28,12 +28,15 @@ let Invoices: Invoice[] = [];
 Invoices.push(inOne);
 Invoices.push(intwo);
 
-console.log(Invoices);
+// console.log(Invoices);
 
-inOne.client = 'yoshi';
-intwo.amount = 400;
+// inOne.client = 'yoshi';
+// intwo.amount = 400;
 
-console.log(inOne, intwo)
+// console.log(inOne, intwo)
+Invoices.forEach(inv => {
+    console.log(inv.client,inv.amount, inv.format());
+});
 
 
 

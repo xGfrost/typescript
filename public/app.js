@@ -5,10 +5,13 @@
 // }
 //classes
 class Invoice {
-    constructor(c, d, a) {
-        this.client = c,
-            this.details = d,
-            this.amount = a;
+    // readonly client: string;
+    // private details: string;
+    // public amount: number;
+    constructor(client, details, amount) {
+        this.client = client;
+        this.details = details;
+        this.amount = amount;
     }
     format() {
         return `${this.client} owes RP${this.amount} for ${this.details}`;
@@ -19,10 +22,13 @@ const intwo = new Invoice('luigi', 'work on the luigi website', 300);
 let Invoices = [];
 Invoices.push(inOne);
 Invoices.push(intwo);
-console.log(Invoices);
-inOne.client = 'yoshi';
-intwo.amount = 400;
-console.log(inOne, intwo);
+// console.log(Invoices);
+// inOne.client = 'yoshi';
+// intwo.amount = 400;
+// console.log(inOne, intwo)
+Invoices.forEach(inv => {
+    console.log(inv.client, inv.amount, inv.format());
+});
 // const form = document.querySelector('form')!;
 const form = document.querySelector('.new-item-form');
 // console.log(form.children);
