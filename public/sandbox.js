@@ -84,4 +84,20 @@
 // console.log(ninja);
 // ninja = {name: 25, age: 'yoshi'};
 // console.log(ninja);
-console.log('test');
+// console.log('test')
+// let greet = () => {
+//     console.log('hello world');
+// }
+let greet;
+greet = () => {
+    console.log('hello world');
+};
+const add = (a, b, c = 10) => {
+    console.log(a + b);
+    console.log(c);
+};
+add(5, 10);
+const minus = (a, b) => {
+    return a + b;
+};
+let result = minus(10, 7);
