@@ -106,28 +106,31 @@ let docone = addUID({name: 'yoshi', age: 40});
 
 console.log(docone.age)
 
+//enums
+enum resourcetype{ BOOK, AUTHOR, FILM, DIRECTOR, PERSON}
+
 //with interfaces
 
 interface Resource<T>{
     uid: number;
-    resourceName: string;
+    resourceName: resourcetype;
     data: T;
 }
 
 const docThree: Resource<string> = {
     uid: 1,
-    resourceName: 'person',
+    resourceName: resourcetype.BOOK,
     data: 'shain'
 }
 const docfor: Resource<object> = {
     uid: 2,
-    resourceName: 'person',
+    resourceName: resourcetype.PERSON,
     data: {name: 'sanra'}
 }
 
 const docfive: Resource<string[]> ={
     uid: 3,
-    resourceName: 'shoppinglist',
+    resourceName: resourcetype.DIRECTOR,
     data: ['test', 'milk', 'toiler roll']
 }
 

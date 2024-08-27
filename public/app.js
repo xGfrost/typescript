@@ -78,19 +78,28 @@ const addUID = (obj) => {
 };
 let docone = addUID({ name: 'yoshi', age: 40 });
 console.log(docone.age);
+//enums
+var resourcetype;
+(function (resourcetype) {
+    resourcetype[resourcetype["BOOK"] = 0] = "BOOK";
+    resourcetype[resourcetype["AUTHOR"] = 1] = "AUTHOR";
+    resourcetype[resourcetype["FILM"] = 2] = "FILM";
+    resourcetype[resourcetype["DIRECTOR"] = 3] = "DIRECTOR";
+    resourcetype[resourcetype["PERSON"] = 4] = "PERSON";
+})(resourcetype || (resourcetype = {}));
 const docThree = {
     uid: 1,
-    resourceName: 'person',
+    resourceName: resourcetype.BOOK,
     data: 'shain'
 };
 const docfor = {
     uid: 2,
-    resourceName: 'person',
+    resourceName: resourcetype.PERSON,
     data: { name: 'sanra' }
 };
 const docfive = {
     uid: 3,
-    resourceName: 'shoppinglist',
+    resourceName: resourcetype.DIRECTOR,
     data: ['test', 'milk', 'toiler roll']
 };
 console.log(docThree, docfor, docfive);
