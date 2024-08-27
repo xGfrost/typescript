@@ -1,7 +1,20 @@
 // const anchor = document.querySelector('a');
-// if (anchor) {
-//     console.log(anchor.href);
-// }
+const me = {
+    name: 'shaun',
+    age: 30,
+    speak(text) {
+        console.log(text);
+    },
+    spend(amount) {
+        console.log(`i spent`, amount);
+        return amount;
+    },
+};
+const greetPerson = (person) => {
+    console.log('hello', person.name);
+};
+greetPerson(me);
+console.log(me);
 //classes
 import { Invoice } from './classes/invoice.js';
 const inOne = new Invoice('mario', 'work on the mario website', 250);
