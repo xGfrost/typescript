@@ -71,3 +71,26 @@ form.addEventListener('submit', (e) => {
     }
     list.render(doc, type.value, 'end');
 });
+//generics
+const addUID = (obj) => {
+    let uid = Math.floor(Math.random() * 100);
+    return Object.assign(Object.assign({}, obj), { uid });
+};
+let docone = addUID({ name: 'yoshi', age: 40 });
+console.log(docone.age);
+const docThree = {
+    uid: 1,
+    resourceName: 'person',
+    data: 'shain'
+};
+const docfor = {
+    uid: 2,
+    resourceName: 'person',
+    data: { name: 'sanra' }
+};
+const docfive = {
+    uid: 3,
+    resourceName: 'shoppinglist',
+    data: ['test', 'milk', 'toiler roll']
+};
+console.log(docThree, docfor, docfive);
