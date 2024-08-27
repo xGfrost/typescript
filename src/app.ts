@@ -84,16 +84,34 @@ const list = new listtemplate(ul);
 
 form.addEventListener('submit', (e: Event) =>{
     e.preventDefault();
+    
+    let values: [string, string, number]
+     values = [toFrom.value,details.value, amount.valueAsNumber  ]
 
     let doc: HasFormatter;
     if (type.value === 'invoice') {
-        doc = new Invoice(toFrom.value, details.value, amount.valueAsNumber);
+        doc = new Invoice(...values);
     }else{
-        doc = new Payment(toFrom.value, details.value, amount.valueAsNumber)
+        doc = new Payment(...values)
     }
 
     list.render(doc, type.value, 'end');
 })
+
+//tuples
+let arr = ['ryu', 25, true];
+
+arr[0] = false;
+arr[1] = 'yoshi';
+arr = [30, false, 'yoshi'];
+
+let tup: [string, number, boolean] = ['ryu', 25, true];
+tup[0] = 'ken';
+tup[1] = 2;
+tup[2] = false;
+
+// let student: [string, number];
+// student = ['chunli', 223232];
 
 //generics
 
