@@ -146,13 +146,42 @@
 
 // let result = minus(10, 7);
 
-type StriongOrNum = string|number;
-type objWithname = { name: string, uid: StriongOrNum}
+// type StriongOrNum = string|number;
+// type objWithname = { name: string, uid: StriongOrNum}
 
-const logdetails = (uid: StriongOrNum, item: string) =>{
-    console.log(`${item} has a uid of ${uid}`);
+// const logdetails = (uid: StriongOrNum, item: string) =>{
+//     console.log(`${item} has a uid of ${uid}`);
+// }
+
+// const greet = (user: objWithname) => {
+//     console.log(`${user.name} says hello`)
+// }
+
+// let greet: Function;
+
+//example 1
+let greet: (a: string, b:string) => void;
+greet = (name: string, greeting: string) => {
+    console.log(`${name} says ${greeting}`)
 }
 
-const greet = (user: objWithname) => {
-    console.log(`${user.name} says hello`)
+//example 2
+let calc: (a:number, b:number, c:string) => number;
+
+calc = (numOne: number, numTwo: number, action: string) => {
+    if (action === 'add') {
+        return numOne +numTwo;
+    } else {
+        return numOne - numTwo;
+    }
 }
+
+//example 3
+let logdetails: (obj: {name: string, age: number}) => void;
+
+type person = {name: string, age: number};
+
+logdetails = (frost: {name: string, age: number}) => {
+    console.log(`${frost.name} is ${frost.age} years old`)
+}
+
