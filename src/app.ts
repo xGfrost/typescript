@@ -5,51 +5,64 @@
 // }
 
 //interfaces
-interface isperson{
-    name:string;
-    age:number;
-    speak(a: string): void;
-    spend(a:number): number;
-}
+// interface isperson{
+//     name:string;
+//     age:number;
+//     speak(a: string): void;
+//     spend(a:number): number;
+// }
 
-const me: isperson ={
-    name: 'shaun',
-    age: 30,
-    speak(text: string): void{
-        console.log(text);
-    },
-    spend(amount: number): number{
-        console.log(`i spent`, amount);
-        return amount;
-    },
-};
+// const me: isperson ={
+//     name: 'shaun',
+//     age: 30,
+//     speak(text: string): void{
+//         console.log(text);
+//     },
+//     spend(amount: number): number{
+//         console.log(`i spent`, amount);
+//         return amount;
+//     },
+// };
 
-const greetPerson = (person: isperson) => {
-    console.log('hello', person.name);
-}
+// const greetPerson = (person: isperson) => {
+//     console.log('hello', person.name);
+// }
 
-greetPerson(me)
-console.log(me)
+// greetPerson(me)
+// console.log(me)
 
 //classes
 import {Invoice} from './classes/invoice.js'
+import { Payment } from './classes/payment.js';
+import { HasFormatter } from './interfaces/HasFormatter.js';
 
-const inOne = new Invoice('mario', 'work on the mario website', 250);
-const intwo = new Invoice('luigi', 'work on the luigi website', 300);
+// let docone: HasFormatter;
+// let doctwo: HasFormatter;
 
-let Invoices: Invoice[] = [];
-Invoices.push(inOne);
-Invoices.push(intwo);
+// docone = new Invoice('yoshi', 'web work', 250);
+// doctwo = new Payment('mario', 'plumbing work', 440);
 
-// console.log(Invoices);
+// let docs: HasFormatter[] = [];
+// docs.push(docone);
+// docs.push(doctwo);
+// console.log(docs);
 
-// inOne.client = 'yoshi';
-// intwo.amount = 400;
+// const inOne = new Invoice('mario', 'work on the mario website', 250);
+// const intwo = new Invoice('luigi', 'work on the luigi website', 300);
 
-// console.log(inOne, intwo)
-Invoices.forEach(inv => {
-    console.log(inv.client,inv.amount, inv.format());
-});
+// let Invoices: Invoice[] = [];
+// Invoices.push(inOne);
+// Invoices.push(intwo);
+
+// // console.log(Invoices);
+
+// // inOne.client = 'yoshi';
+// // intwo.amount = 400;
+
+// // console.log(inOne, intwo)
+// Invoices.forEach(inv => {
+//     console.log(inv.client,inv.amount, inv.format());
+// });
 
 
 
@@ -66,10 +79,12 @@ const amount = document.querySelector('#amount') as HTMLInputElement;
 form.addEventListener('submit', (e: Event) =>{
     e.preventDefault();
 
-    console.log(
-        type.value,
-        toFrom.value,
-        details.value,
-        amount.valueAsNumber
-    )
+    let doc: HasFormatter;
+    if (type.value === 'invoice') {
+        doc = new Invoice(toFrom.value, details.value, amount.valueAsNumber);
+    }else{
+        doc = new Payment(toFrom.value, details.value, amount.valueAsNumber)
+    }
+
+    console.log(doc)
 })
