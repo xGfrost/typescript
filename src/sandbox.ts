@@ -127,21 +127,32 @@
 //     console.log('hello world');
 // }
 
-let greet: Function;
+// let greet: Function;
 
-greet = () =>{
-    console.log('hello world');
+// greet = () =>{
+//     console.log('hello world');
+// }
+
+// const add = (a: number, b: number, c: number |string = 10 ): void =>{
+//     console.log(a + b);
+//     console.log(c)
+// }
+
+// add(5, 10);
+
+// const minus = (a: number, b: number): number => {
+//     return a + b;
+// }
+
+// let result = minus(10, 7);
+
+type StriongOrNum = string|number;
+type objWithname = { name: string, uid: StriongOrNum}
+
+const logdetails = (uid: StriongOrNum, item: string) =>{
+    console.log(`${item} has a uid of ${uid}`);
 }
 
-const add = (a: number, b: number, c: number |string = 10 ): void =>{
-    console.log(a + b);
-    console.log(c)
+const greet = (user: objWithname) => {
+    console.log(`${user.name} says hello`)
 }
-
-add(5, 10);
-
-const minus = (a: number, b: number): number => {
-    return a + b;
-}
-
-let result = minus(10, 7);
